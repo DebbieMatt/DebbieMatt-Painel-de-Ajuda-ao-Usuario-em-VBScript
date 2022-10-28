@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--https://iconverticons.com/online/-->
+    <head>
+        <title>Painel de ajuda</title>
+        <HTA: Application  WINDOWSTATE ="normal" ICON: windows.exe edge = thin borderStyle="raised" scrollflat= yes caption = yes SYSMENU = yes contextmenu = yes showInTaskBar = yes maximizeButton = yes minimizeButton = "yes" > 
+    </head>
+    <body bgcolor= "#6495ED">
+        <font color = "FFFFFF">
+        <font size = "4">
+        <font face = "arial">
+    <script lang="VBScript">
+        Sub Window.Open()
+
+        if OptionValue(0).checked Then 
+        objOpenPage="calc.exe" 
+        end if
+        if OptionValue(1).checked Then
+        objOpenPage="cmd.exe"
+        end if 
+        if OptionValue(2).checked Then
+        objOpenPage="wordpad.exe"
+        end if
+        if OptionValue(3).checked Then
+        objOpenPage=""
+        end if
+        if OptionValue(4).checked Then
+        objOpenPage=""
+        end if
+        if OptionValue(5).checked Then
+        objOpenPage=""
+        end if
+        if OptionValue(6).checked Then
+        objOpenPage=""
+        end if
+        if OptionValue(7).checked Then
+        objOpenPage=""
+        end if
+        if OptionValue(8).checked Then
+        objOpenPage=""
+        end if
+        objOpenPage="" then 
+        exit sub 
+        end if
+
+        strURL = objOpenPage
+        set objshell = createObject("Wscript.shell")
+        objshell.run(strURL)
+        end sub
+    </script>
+
+    <p><h1 align = center font color="yeloow">Painel de ajuda</h1></p>
+    <input type="radio" name="optionValue" value="calc">Acessar calculadora<br>
+    <input type="radio" name="optionValue" value="cmd">Acessar Promt de comando<br>
+    <input type="radio" name="optionValue" value="gerenciador">Acessar gerenciador<br>
+    <input type="radio" name="optionValue" value="word pad">Acessar Word pad<br>
+    <input style="font-size: 19px; border: double; color: FF0000; background-color: #FFFFFF;" id= RunButton class="button" type="button" value="executar" name="ok" onclick= Window.Open()>
+    <span id="DataArea"></span></body><div align="center">
+        <p><a href="mailto:deboramateusdec@gmail.com">Clique aqui para entrar em contato com o desenvolvedor</a></p>
+
+    <script Language = VBScript>
+    Sub Exit
+        window.close()
+    End Sub
+<input id= RunButton type="button" value="Exit" onClick="Exit">
+
+
+    </body>
+</html>
